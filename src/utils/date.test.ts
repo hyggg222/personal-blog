@@ -18,7 +18,7 @@ describe('date utils', () => {
         });
 
         it('should throw an error for an invalid date string', () => {
-            expect(() => formatDate('not-a-valid-date')).toThrowError(
+            expect(() => formatDate('not-a-valid-date')).toThrow(
                 'Invalid date input: not-a-valid-date'
             );
         });
