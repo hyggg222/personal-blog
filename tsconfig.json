@@ -1,7 +1,15 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist", "coverage"],
+  "include": [
+    ".astro/types.d.ts",
+    "**/*"
+  ],
+  "exclude": [
+    "dist",
+    "coverage",
+    "cdk",
+    "eslint.config.js"
+  ],
   "compilerOptions": {
     "strictNullChecks": true
   }
