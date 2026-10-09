@@ -5,7 +5,7 @@ describe('date utils', () => {
     describe('formatDate', () => {
         it('should format a Date object with default locale and options', () => {
             const date = new Date('2026-01-15T00:00:00Z');
-            const formatted = formatDate(date);
+            const formatted = formatDate();
             expect(formatted).toContain('2026');
             expect(formatted).toContain('Jan');
         });
