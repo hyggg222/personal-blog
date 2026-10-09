@@ -25,3 +25,4 @@ pnpm-debug.log*
 
 # private docs
 docs-private/
+.claude/
