@@ -12,7 +12,5 @@ export default defineConfig((env) =>
         reporter: ['text', 'json', 'html'],
       },
     },
-  })(env)
+  })(env),
 );
-
-
