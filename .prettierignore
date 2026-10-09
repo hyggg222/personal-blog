@@ -1,0 +1,9 @@
+dist/
+.astro/
+coverage/
+cdk/
+docs-private/
+.claude/
+node_modules/
+package-lock.json
+src/content/

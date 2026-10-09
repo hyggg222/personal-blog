@@ -3,7 +3,7 @@ name: Deploy Static Site via AWS CDK
 on:
   push:
     branches: [main]
-  pull_request:  
+  pull_request:
     branches: [main]
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
       - name: Install CDK Dependencies
         run: cd cdk && npm ci
 
-      - name: Configure AWS Credentials 
+      - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
