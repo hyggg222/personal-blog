@@ -1,23 +1,22 @@
 version: 2
 updates:
   # Check Astro package.json
-  - package-ecosystem: "npm"
-    directory: "/"
+  - package-ecosystem: 'npm'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     open-pull-requests-limit: 5
 
   # Check CDK package.json
-  - package-ecosystem: "npm"
-    directory: "/cdk"
+  - package-ecosystem: 'npm'
+    directory: '/cdk'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     open-pull-requests-limit: 5
 
   # Check Github Actions workflows
-  - package-ecosystem: "github-actions"
-    directory: "/"
+  - package-ecosystem: 'github-actions'
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: 'weekly'
     open-pull-requests-limit: 5
-
