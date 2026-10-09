@@ -1,10 +1,11 @@
 ---
 name: Task
 about: A unit of work to be done
-title: "[TASK] "
+title: "type: "
 ---
 
 ## Description
+<!-- Title format: type(scope): description. Types: feat, fix, docs, ci, build, chore, test, refactor -->
 What needs to be done, and why?
 
 ## Acceptance criteria
