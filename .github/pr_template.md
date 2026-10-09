@@ -1,2 +1,0 @@
-## Things have changed
-Closes #
