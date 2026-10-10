@@ -1,0 +1,18 @@
+import * as cdk from 'aws-cdk-lib';
+import * as ecr from 'aws-cdk-lib/aws-ecr';
+
+export class EcrStack extends cdk.Stack {
+  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
+    super(scope, id, props);
+
+    const repository = new ecr.Repository(this, 'AppRepository', {
+      repositoryName: 'astro-blog',
+      imageScanOnPush: true,
+      removalPolicy: cdk.RemovalPolicy.RETAIN,
+    });
+
+    new cdk.CfnOutput(this, 'RepositoryUri', {
+      value: repository.repositoryUri,
+    });
+  }
+}
