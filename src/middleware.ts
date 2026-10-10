@@ -10,7 +10,7 @@ export const onRequest = defineMiddleware(async ({ request, url }, next) => {
   const logEntry = {
     timestamp: new Date().toISOString(),
     level: response.status >= 500 ? 'ERROR' : 'INFO',
-    route: url.pathname, // ví dụ: /api/health
+    route: url.pathname, // eg: /api/health
     method: request.method, // GET, POST...
     statusCode: response.status,
     latencyMs: latencyMs,
