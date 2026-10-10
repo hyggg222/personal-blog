@@ -47,12 +47,16 @@ export class StaticSiteStack extends cdk.Stack {
       defaultRootObject: 'index.html',
     });
 
-    // 4. Update automatically from dist to S3
+    // 4. Update automatically from dist/client to S3 (dist/server is runtime code, not for S3)
     new s3deploy.BucketDeployment(this, 'DeploySite', {
-      sources: [s3deploy.Source.asset('./../dist')],
+      sources: [s3deploy.Source.asset('./../dist/client')],
       destinationBucket: siteBucket,
       distribution,
       distributionPaths: ['/*'], // Automatic CloudFront CDN cache invalidation!
+    });
+
+    new cdk.CfnOutput(this, 'SiteUrl', {
+      value: `https://${distribution.distributionDomainName}`,
     });
   }
 }
