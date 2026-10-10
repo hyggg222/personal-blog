@@ -25,4 +25,14 @@ pnpm-debug.log*
 
 # private docs
 docs-private/
-.claude/cdk/cdk-outputs.json
+.claude/
+
+# test coverage reports
+coverage/
+
+# vendored AWS CLI installer
+cdk/awscliv2.zip
+cdk/aws/
+
+# CDK deploy outputs
+cdk/cdk-outputs.json
