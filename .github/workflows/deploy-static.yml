@@ -42,7 +42,7 @@ jobs:
 
       - name: Deploy Infrastructure (Merged Main Execution)
         if: github.event_name == 'push'
-        run: cd cdk && npx cdk deploy --require-approval never --outputs-file cdk-outputs.json
+        run: cd cdk && npx cdk deploy CdkStack --require-approval never --outputs-file cdk-outputs.json
 
       - name: Smoke Test Deployed Site
         if: github.event_name == 'push'

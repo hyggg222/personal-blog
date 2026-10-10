@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import * as cdk from 'aws-cdk-lib/core';
 import { StaticSiteStack } from '../lib/static-site-stack';
+import { EcrStack } from '../lib/ecr-stack';
 
 const app = new cdk.App();
 new StaticSiteStack(app, 'CdkStack', {
@@ -17,4 +18,8 @@ new StaticSiteStack(app, 'CdkStack', {
   env: { account: '468204079455', region: 'eu-west-1' },
 
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
+});
+
+new EcrStack(app, 'EcrStack', {
+  env: { account: '468204079455', region: 'eu-west-1' },
 });
