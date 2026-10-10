@@ -36,3 +36,7 @@ cdk/aws/
 
 # CDK deploy outputs
 cdk/cdk-outputs.json
+
+# local tooling config
+AGENTS.md
+CLAUDE.md
